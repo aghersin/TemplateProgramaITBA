@@ -1,0 +1,180 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{setspace}
+\usepackage{url}
+% \usepackage[a4paper,total={7.5in,25cm},top=2cm,bottom=2cm,headsep=0.3cm,footskip=0.5cm]{geometry}
+% \usepackage[a4paper,total={6.5in,22cm},hoffset=1cm,footskip=1cm,headsep=2cm,voffset=1cm]{geometry}
+\usepackage[a4paper,total={7in,24cm},hoffset=0cm,footskip=1cm,headsep=0cm,voffset=1cm,headheight=83pt]{geometry}
+
+% \doublespacing
+\singlespacing
+% \onehalfspacing
+
+% \usepackage[scaled]{uarial}
+%\renewcommand*\familydefault{\sfdefault} 
+%% Only if the base font of the document is to be sans serif
+
+\usepackage[spanish]{babel}
+\usepackage{floatflt}
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Use 8-bit encoding
+\usepackage{csquotes}
+\usepackage[backend=biber, style=apa]{biblatex}
+\addbibresource{fundamentos.bib}
+\DeclareBibliographyCategory{obligatoria}
+\DeclareBibliographyCategory{complementaria}
+\addtocategory{obligatoria}{paganini:rob-sys,rssp:rob-sys}
+\addtocategory{complementaria}{doy:feed-cont}
+
+
+%\usepackage{fourier} % Use the Adobe Utopia font for the document
+%\usepackage{times}
+\usepackage{helvet}
+
+\renewcommand{\familydefault}{\sfdefault}
+% If you use XeLaTeX or LuaLaTeX, you can use TrueType Arial font installed in your Windows/Mac:
+% \usepackage{fontspec}
+% \setmainfont{Arial}
+
+\usepackage[pdftex]{graphicx}
+
+\usepackage{fancyhdr}
+
+\title{\underline{\LARGE DOCTORADO} \\ {\normalsize Programa analítico de la materia:}}
+\author{}
+\date{}
+%\usepackage[pagestyles]{titlesec}
+\usepackage{titlesec}
+
+\usepackage{enumitem}
+\setlist[enumerate]{itemsep=0mm}
+\setlist[itemize]{itemsep=0mm}
+\setlist[description]{itemsep=0mm}
+\usepackage{xcolor}
+\definecolor{lightgray}{rgb}{0.9, 0.9, 0.9}
+
+%\titleformat*{\section}{\normalsize\normalfont\bfseries}
+\titleformat{name=\section}[block]
+  {\normalsize\normalfont\bfseries}%\sffamily\large}
+  {}
+  {0pt}
+  {\colorsection}
+\titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
+
+\newcommand{\colorsection}[1]{%
+  \colorbox{lightgray}{\parbox{\dimexpr\textwidth-2\fboxsep}{\thesection\ #1}}}
+
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+
+\begin{document}
+
+\fancyhead{} % clear all header fields
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[R]{\includegraphics*[width=40mm]{LogoITBA.jpg}}
+\fancyfoot[L]{
+\footnotesize 
+Iguazú 341 - 2° piso \\
+Parque Patricios, CABA \\
+\url{https://www.itba.edu.ar}
+} % clear all footer fields
+\fancyfoot[C]{\thepage}
+% \fancyfoot[LO,CE]{From: K. Grant}
+% \fancyfoot[CO,RE]{To: Dean A. Smith}
+\maketitle
+\thispagestyle{fancy}
+\pagestyle{fancy}
+%\colorbox{lightgray}{
+\section{{Nombre de la materia:} }
+
+<AQUÍ VA EL NOMBRE DEL CURSO>.
+
+\section{Presentación de la materia:\\{\tiny{\normalfont Hasta 500 palabras}}}
+
+<AQUÍ VA LA PRESENTACIÓN DE LA MATERIA>.
+
+\section{Docente responsable (Adjuntar CVar):}
+\begin{enumerate}[label=\alph*-]
+    \item Nombre y Apellido: <NOMBRE DEL DOCENTE>
+    \item Máximo título alcanzado: <MAESTRÍA/DOCTORADO correspondiente.>.
+    \item N° de DNI: xx.yyy.zzz
+\end{enumerate}
+\section{Equipo docente:}
+<NOMBRE DEL DOCENTE 1>, <NOMBRE DEL DOCENTE 2>.
+\section{
+Requisitos de admisibilidad a la materia: \\
+{\tiny{\normalfont (Cursos, técnicas o conocimientos previos necesarios para el cursado)}}}
+
+<CONOCIMIENTOS PREVIOS>
+
+\section{Duración en horas:}
+\begin{enumerate}[label=\alph*-]
+    \item Horas teóricas: 48 
+    \item Horas prácticas: 16
+    \item Horas total: 64
+\end{enumerate}
+
+\section{Idioma del dictado:}
+
+<IDIOMA normalmente Castellano>.
+
+\section{¿Podría dictarse una versión en idioma inglés?}
+
+<SI o NO>.
+
+\section{
+Objetivos de aprendizaje: \\
+{\tiny{\normalfont  Hasta tres.
+}}}
+
+\begin{enumerate}[label=\arabic*-]
+    \item <OBJ1>.
+    \item <OBJ2>.
+    \item <OBJ3>.
+\end{enumerate}
+
+\section{ Contenidos \\ {{\normalfont \tiny Separado por unidades. }}}
+
+Se cita como muestra 1 el libro de \cite{rssp:rob-sys}.
+
+Se citan como muestra 2, los libros de \cite{paganini:rob-sys,doy:feed-cont}
+
+\section{ Trabajo de laboratorio: \\ {{\normalfont \tiny De existir, se deberá consignar el tipo de actividad esperada. }}}
+
+<DESARROLLAR EN BASE A SU CURSO>.
+    
+\section{ Metodología de enseñanza: \\ {{\normalfont \tiny Si se realiza alguna activ. práctica que no sea de laboratorio debe estar explicada en este punto.}}}
+
+<MUESTRA DE METODOLOGÍA>
+
+El curso se desarrollará en base a clases teórico–prácticas sobre la base de las cuales se asignará la realización de los siguientes trabajos prácticos:
+\begin{enumerate}
+\item Planteo de problemas de análisis y diseño.
+\item Trabajo final.
+\end{enumerate}
+
+\section{ Bibliografía obligatoria: \\ {{\normalfont \tiny Referir según normas APA.}}}
+
+\printbibliography[category={obligatoria},heading=none]
+
+\section{ Bibliografía complementaria: \\ {{\normalfont \tiny Referir según normas APA.}}}
+
+\printbibliography[category={complementaria},heading=none]
+
+\section{ Recursos didácticos para la enseñanza:}
+
+Aula, pizarrón, computadoras personales. <ADAPTAR A SU PREFERENCIA>
+
+\section{ Modalidad de evaluación: \\ {{\normalfont \tiny Tipo, requerimiento, oportunidad, etc..}}}
+
+Examen. <ADAPTAR A SU PREFERENCIA>
+
+Trabajo práctico final. <ADAPTAR A SU PREFERENCIA>
+
+\section{ Requisitos de aprobación: \\ {{\normalfont \tiny Condición, escala, etc.}}}
+
+Nota mayor a seis para doctorado. <ADAPTAR A SU PREFERENCIA>
+
+\end{document}
